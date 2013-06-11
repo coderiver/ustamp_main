@@ -1,12 +1,16 @@
 // responsive example, edit or remove
-$break-small: 500px;
-$break-large: 1180px;
+$step1: 1280px;
+$step2: 1200px;
+$step3: 570px;
 @mixin respond-to($media) {
-	@if $media == pda {
-		@media only screen and (max-width: $break-small) { @content; }
+	@if $media == step1 {
+		@media only screen and (max-width: $step1) { @content; }
 	}
-	@else if $media == wide {
-		@media only screen and (min-width: $break-large) { @content; }
+	@else if $media == step2 {
+		@media only screen and (max-width: $step2) { @content; }
+	}
+	@else if $media == step3 {
+		@media only screen and (max-width: $step3) { @content; }
 	}
 }
 // retina bg
